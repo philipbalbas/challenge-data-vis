@@ -89,7 +89,6 @@ const ScatterPlot = ({
             <div
               onMouseEnter={() => {
                 handleMouseEnter(item, i)
-                console.log(left, width)
               }}
               onMouseOut={() => handleMouseOut()}
               key={i}
@@ -154,7 +153,6 @@ module.exports = createReactClass({
     const { width, height } = this.props
     return (
       <div
-        ref={node => (this.graphBox = node)}
         style={{
           position: 'relative',
           width,

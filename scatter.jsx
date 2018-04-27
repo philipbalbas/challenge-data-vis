@@ -11,7 +11,14 @@ const colorSelector = species => {
 
 module.exports = createReactClass({
   getInitialState() {
-    return { data: [], hoveredItem: {} }
+    return {
+      data: [],
+      hoveredItem: {},
+      maxPetalLength: 0,
+      maxPetalWidth: 0,
+      minPetalLength: 0,
+      minPetalWidth: 0
+    }
   },
 
   componentDidMount() {

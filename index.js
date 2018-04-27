@@ -1,11 +1,12 @@
-var React = require('React')
+var React = require('react')
 var ReactDOM = require('react-dom')
 
 var Scatter = require('./scatter.jsx')
 
 document.body.style.margin = 0
 document.body.style.background = '#333'
-document.body.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
+document.body.style.fontFamily =
+  '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
 
 var container = document.createElement('div')
 container.style.display = 'flex'

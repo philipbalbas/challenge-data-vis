@@ -111,8 +111,8 @@ module.exports = createReactClass({
       maxPetalWidth: 0,
       minPetalLength: 0,
       minPetalWidth: 0,
-      height: this.props.height,
-      width: this.props.width
+      height: window.innerWidth * 0.8,
+      width: window.innerHeight * 0.8
     }
   },
 

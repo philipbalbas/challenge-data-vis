@@ -110,7 +110,9 @@ module.exports = createReactClass({
       maxPetalLength: 0,
       maxPetalWidth: 0,
       minPetalLength: 0,
-      minPetalWidth: 0
+      minPetalWidth: 0,
+      height: this.props.height,
+      width: this.props.width
     }
   },
 
@@ -131,6 +133,13 @@ module.exports = createReactClass({
         minPetalLength
       })
     })
+
+    window.addEventListener('resize', e => {
+      this.setState({
+        height: e.target.innerHeight * 0.8,
+        width: e.target.innerWidth * 0.8
+      })
+    })
   },
 
   handleMouseEnter(item, i) {
@@ -148,9 +157,11 @@ module.exports = createReactClass({
       maxPetalLength,
       minPetalWidth,
       minPetalLength,
-      hoveredItem
+      hoveredItem,
+      height,
+      width
     } = this.state
-    const { width, height } = this.props
+    // const { width, height } = this.props
     return (
       <div
         style={{

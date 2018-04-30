@@ -16,10 +16,25 @@ container.style.height = '100vh'
 
 document.body.appendChild(container)
 
-var element = React.createElement(Scatter, {
-  // width: window.innerWidth * 0.8,
-  // height: window.innerHeight * 0.8,
+let width = window.innerWidth * 0.8
+let height = window.innerHeight * 0.8
+
+let element = React.createElement(Scatter, {
+  width,
+  height,
   dataset: 'https://azure-respect.glitch.me/iris.json'
+})
+
+window.addEventListener('resize', e => {
+  width = e.target.innerWidth * 0.8
+  height = e.target.innerHeight * 0.8
+
+  element = React.createElement(Scatter, {
+    width,
+    height,
+    dataset: 'https://azure-respect.glitch.me/iris.json'
+  })
+  ReactDOM.render(element, container)
 })
 
 ReactDOM.render(element, container)
